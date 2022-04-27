@@ -1,0 +1,41 @@
+{
+    "name": "stats4sd/laravel-generate-odk-submissions",
+    "description": "A package to generate fake ODK data using an XLS Form definition. Integrated with other ODK / Kobotoolbox related packages developed by Stats4sd.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dave Mills",
+            "email": "d.e.mills@stats4sd.org",
+            "homepage": "https://stats4sd.org"
+        }
+    ],
+    "homepage": "https://github.com/stats4sd/laravel-generate-odk-submissions",
+    "keywords": ["Laravel", "GenerateOdkSubmissions"],
+    "require": {
+        "laravel/framework": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stats4sd\\GenerateOdkSubmissions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stats4sd\\GenerateOdkSubmissions\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stats4sd\\GenerateOdkSubmissions\\GenerateOdkSubmissionsServiceProvider"
+            ],
+            "aliases": {
+                "GenerateOdkSubmissions": "Stats4sd\\GenerateOdkSubmissions\\Facades\\GenerateOdkSubmissions"
+            }
+        }
+    }
+}
